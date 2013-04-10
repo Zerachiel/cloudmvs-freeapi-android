@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/*
+ * Copyright (c) 2013 Mobile Acuity Ltd. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<resources>
+    <string name="app_name">Cloud MVS</string>
+    <string name="configure_heading">Configure Service</string>
+    <string name="configure_instruction">Complete the Search API URL as displayed in your service settings screen on our website:</string>
+    <string name="configure_url">"http://api.mobileacuity.net/v1/search/test/"</string>
+    <string name="configure_service">"Service: "</string>
+    <string name="configure_follow">Automatically Follow Links</string>
+    <string name="configure_ok">Save Configuration</string>
+    <string name="configure_fail">Please provide a test service name!</string>
+    <string name="menu_configure">Configure &#8230;</string>
+	<string name="progress_title">Searching</string>
+	<string name="progress_text">The server is searching for matching images &#8230;</string>
+	<string name="fail_title">Failed</string>
+	<string name="fail_text">&quot;Unexpected error when connecting to search server: &quot;</string>
+	<string name="refused_text">The configured test service doesn\'t appear to exist?</string>
+	<string name="non200_text">&quot;Unexpected HTTP response: &quot;</string>
+	<string name="timeout_text">Network connection timeout!</string>
+	<string name="nomatch_title">Not found</string>
+	<string name="nomatch_text">No matching images were found!</string>
+    <string name="retry_btn">Try Again!</string>
+    <string name="configure_btn">Configure &#8230;</string>
+    <string name="link_btn">Visit URL in browser &#8230;</string>
+    <string name="result_result">Result:</string>
+    <string name="result_raw">ID:</string>
+    <string name="result_score">Score:</string>
+    <string name="result_centre">Centre:</string>
+</resources>
