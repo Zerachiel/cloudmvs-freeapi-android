@@ -44,8 +44,7 @@ public class ResultListActivity extends ListActivity implements ListAdapter
 	// Lifecycle & UI
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		// Cache the layout inflator
@@ -56,8 +55,7 @@ public class ResultListActivity extends ListActivity implements ListAdapter
 	}
 	
 	@Override
-	protected void onListItemClick(ListView l, View v, int position, long id)
-	{
+	protected void onListItemClick(ListView l, View v, int position, long id) {
 		if (Log.isLoggable(TAG, Log.DEBUG)) Log.d(TAG, "onListItemClick for "+position);
 		
 		ResultListView view = (ResultListView)v;
@@ -72,32 +70,27 @@ public class ResultListActivity extends ListActivity implements ListAdapter
 	// ListAdapter API
 	
 	@Override
-	public int getCount()
-	{
+	public int getCount() {
 		return results.length;
 	}
 
 	@Override
-	public Object getItem(int position)
-	{
+	public Object getItem(int position) {
 		return results[position];
 	}
 
 	@Override
-	public long getItemId(int position)
-	{
+	public long getItemId(int position) {
 		return 0;
 	}
 
 	@Override
-	public int getItemViewType(int position)
-	{
+	public int getItemViewType(int position) {
 		return 0;
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent)
-	{
+	public View getView(int position, View convertView, ViewGroup parent) {
 		if (Log.isLoggable(TAG, Log.DEBUG)) Log.d(TAG, "getView for "+position);
 		
 		ResultListView view = (ResultListView)convertView;
@@ -113,44 +106,37 @@ public class ResultListActivity extends ListActivity implements ListAdapter
 	}
 
 	@Override
-	public int getViewTypeCount()
-	{
+	public int getViewTypeCount() {
 		return 1;
 	}
 
 	@Override
-	public boolean hasStableIds()
-	{
+	public boolean hasStableIds() {
 		return false;
 	}
 
 	@Override
-	public boolean isEmpty()
-	{
+	public boolean isEmpty() {
 		return results.length==0;
 	}
 
 	@Override
-	public void registerDataSetObserver(DataSetObserver observer)
-	{
+	public void registerDataSetObserver(DataSetObserver observer) {
 		// Ignore
 	}
 
 	@Override
-	public void unregisterDataSetObserver(DataSetObserver observer)
-	{
+	public void unregisterDataSetObserver(DataSetObserver observer) {
 		// // Ignore
 	}
 
 	@Override
-	public boolean areAllItemsEnabled()
-	{
+	public boolean areAllItemsEnabled() {
 		return true;
 	}
 
 	@Override
-	public boolean isEnabled(int position)
-	{
+	public boolean isEnabled(int position) {
 		return true;
 	}
 }

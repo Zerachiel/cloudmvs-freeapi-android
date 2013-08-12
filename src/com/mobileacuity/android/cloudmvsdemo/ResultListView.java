@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 Mobile Acuity Ltd. All rights reserved.
+s * Copyright (c) 2013 Mobile Acuity Ltd. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,37 +23,32 @@ import android.widget.TwoLineListItem;
 /**
  * Very thin and dumb wrapper around TwoLineListItem that stores its position in the list
  */
-public class ResultListView extends TwoLineListItem
-{
+@SuppressWarnings("deprecation")
+public class ResultListView extends TwoLineListItem {
+	
 	private int listPosition = -1;
 	
-	public ResultListView(Context context, AttributeSet attrs, int defStyle)
-	{
+	public ResultListView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 	}
 
-	public ResultListView(Context context, AttributeSet attrs)
-	{
+	public ResultListView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 
-	public ResultListView(Context context)
-	{
+	public ResultListView(Context context) {
 		super(context);
 	}
 
-	public int getListPosition()
-	{
+	public int getListPosition() {
 		return listPosition;
 	}
 
-	public void setListPosition(int listPosition)
-	{
+	public void setListPosition(int listPosition) {
 		this.listPosition = listPosition;
 	}
 
-	public void updateText(Result result)
-	{
+	public void updateText(Result result) {
 		getText1().setText(result.getResult());
 		getText2().setText(""+result.getScore());				
 	}

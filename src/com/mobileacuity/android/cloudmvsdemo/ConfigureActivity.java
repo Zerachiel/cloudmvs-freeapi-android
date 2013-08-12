@@ -53,8 +53,7 @@ public class ConfigureActivity extends Activity
 	// Lifecycle
 	
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (Log.isLoggable(TAG, Log.DEBUG)) Log.d(TAG, "onCreate");
         
@@ -132,17 +131,15 @@ public class ConfigureActivity extends Activity
 	///////////////////////////////////////////////////////////////////////////////////////////////////
     // Actions
 
-	public static void doConfigure(Context caller)
-	{
+	public static void doConfigure(Context caller) {
 		if (Log.isLoggable(TAG, Log.DEBUG)) Log.d(TAG, "Switching to configuration screen.");
 		configure = true;
 		Intent intent = new Intent(caller, ConfigureActivity.class);
 		caller.startActivity(intent);
 	}
 	
-	private void startVisualSearch()
-	{
-		SearchingActivity.mars3Url = getString(R.string.configure_url)+service;
+	private void startVisualSearch() {
+		SearchCloud.mars3Url = getString(R.string.configure_url)+service;
 		SearchingActivity.autoFollowLinks = follow;
 		
 		if (configure) {

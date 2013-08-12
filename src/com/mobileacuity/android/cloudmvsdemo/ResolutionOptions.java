@@ -35,8 +35,7 @@ public class ResolutionOptions
 
 	private Option[] options;
 	
-	public ResolutionOptions(String resolutionList)
-	{
+	public ResolutionOptions(String resolutionList) {
 		if (Log.isLoggable(TAG, Log.DEBUG)) Log.d(TAG, "Initialised with: "+resolutionList);
 		
 		if (resolutionList==null) {
@@ -44,8 +43,7 @@ public class ResolutionOptions
 		} else {
 			List<Option> temp = new LinkedList<Option>(); 
 			
-		    for (String size : COMMA.split(resolutionList))
-		    {
+		    for (String size : COMMA.split(resolutionList)) {
 		        size = size.trim();
 		        
 		        int xPos = size.indexOf('x');
@@ -63,17 +61,14 @@ public class ResolutionOptions
 		}
 	}
 
-	public int getSize()
-	{
+	public int getSize() {
 		return options.length;
 	}
 
-	public Option biggestWithin(int width, int height)
-	{
+	public Option biggestWithin(int width, int height) {
 		Option result = null;
 		
-		for (int i=0; i<options.length && result==null; i+=1)
-		{
+		for (int i=0; i<options.length && result==null; i+=1) {
 			if (options[i].getWidth()<=width && options[i].getHeight()<=height) {
 				result = options[i];
 			}
@@ -82,8 +77,7 @@ public class ResolutionOptions
 		return result;
 	}
 	
-	public Option leastDifference(int width, int height)
-	{
+	public Option leastDifference(int width, int height) {
 		Option result = null;
 		int bestDiff = Integer.MAX_VALUE;
 		
@@ -98,24 +92,20 @@ public class ResolutionOptions
 		return result;
 	}
 	
-	public static class Option
-	{
+	public static class Option {
 		private int width;
 		private int height;
 		
-		public Option(int width, int height)
-		{
+		public Option(int width, int height) {
 			this.width = width;
 			this.height = height;
 		}
 
-		public int getWidth()
-		{
+		public int getWidth() {
 			return width;
 		}
 
-		public int getHeight()
-		{
+		public int getHeight() {
 			return height;
 		}
 	}

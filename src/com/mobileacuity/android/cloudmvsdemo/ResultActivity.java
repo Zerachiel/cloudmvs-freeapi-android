@@ -39,8 +39,7 @@ public class ResultActivity extends Activity
 	static Result result;
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		if (Log.isLoggable(TAG, Log.DEBUG)) Log.d(TAG, "Result: "+result);
@@ -64,10 +63,8 @@ public class ResultActivity extends Activity
 		}
 	}	
 
-	private OnClickListener onClickListener = new OnClickListener()
-	{
-		public void onClick(View v)
-		{
+	private OnClickListener onClickListener = new OnClickListener() {
+		public void onClick(View v) {
 			if (Log.isLoggable(TAG, Log.DEBUG)) Log.d(TAG, "onClick: "+result.getResult());
 			Intent intent = new Intent(Intent.ACTION_VIEW, result.getUri());
 			startActivity(intent);

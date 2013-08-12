@@ -20,10 +20,11 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobileacuity.android.cloudmvsdemo"
-    android:versionCode="7"
-    android:versionName="2.5" >
+    android:versionCode="8"
+    android:versionName="2.6" >
 
-    <uses-sdk android:minSdkVersion="4" />
+    <uses-sdk android:minSdkVersion="8"
+        android:targetSdkVersion="18"  />
     <uses-permission android:name="android.permission.INTERNET"/>
   	<uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>

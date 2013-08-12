@@ -43,8 +43,7 @@ public class Result
 	private float cx;
 	private float cy;
 	
-	public Result(String raw, String result, float score, float cx, float cy)
-	{
+	public Result(String raw, String result, float score, float cx, float cy) {
 		this.raw = raw;
 		this.result = result;
 		if (URLUtil.isHttpUrl(result) || URLUtil.isHttpsUrl(result)) uri = Uri.parse(result);
@@ -53,44 +52,36 @@ public class Result
 		this.cy = cy;
 	}
 
-	public String getRaw()
-	{
+	public String getRaw() {
 		return raw;
 	}
 
-	public String getResult()
-	{
+	public String getResult() {
 		return result;
 	}
 
-	public Uri getUri()
-	{
+	public Uri getUri() {
 		return uri;
 	}
 
-	public float getScore()
-	{
+	public float getScore() {
 		return score;
 	}
 
-	public float getCx()
-	{
+	public float getCx() {
 		return cx;
 	}
 
-	public float getCy()
-	{
+	public float getCy() {
 		return cy;
 	}
 	
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return "Result["+result+","+raw+","+score+","+cx+","+cy+"]";
 	}
 
-	public static Result[] unpackJsonResultsList(String json) throws JSONException
-	{
+	public static Result[] unpackJsonResultsList(String json) throws JSONException {
 		JSONArray jsonArray = new JSONArray(json);
 		List<Result> resultsList = new LinkedList<Result>();
 
